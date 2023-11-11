@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+<div class="row">
+    {% for post in posts %}
+    <div class="col-6">
+        <div class="post-card p-3 mb-3" style="background-color: #f0f0f0;">
+            <h2><a href="{% url 'post_detail' post.pk %}" class="text-dark">{{ post.name }}</a></h2>
+            <img src="{{ post.images.url }}" width="600" height="300" alt="">
+            <p>{{ post.description | truncatewords:40 }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+<div class="pagination d-flex justify-content-center">
+    <span class="step-links">
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_previous %}
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="?page=1">&laquo; first</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                </li>
+            </ul>
+        {% endif %}
+
+        {% if page_obj.has_next %}
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                </li>
+            </ul>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock content %}

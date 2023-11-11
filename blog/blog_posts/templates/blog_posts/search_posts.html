@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Search{% endblock title %}
+
+
+{% block content %}
+<h2>Post search results:</h2>
+{% if results.posts %}
+    <ul>
+        {% for post in results.posts %}
+            <li>
+                <h3><a href="{% url 'post_detail' post.pk %}">{{ post.name }}</a></h3>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts found.</p>
+{% endif %}
+
+<h2>User search results:</h2>
+{% if results.users %}
+    <ul>
+        {% for user in results.users %}
+            <li>
+                <h3><a href="{% url 'profile' user.pk %}">{{ user.username }}</a></h3>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No users found.</p>
+{% endif %}
+{% endblock %}

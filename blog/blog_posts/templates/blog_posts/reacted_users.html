@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Post {{ post.name | truncatewords:8 }} reactions{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Likes</h3>
+            <div class="list-group">
+                {% for user in post.liked_by.all %}
+                    <div class="list-group-item d-flex align-items-center">
+                        <img src="{{ user.profile_pic.url }}" alt="{{ user.username }}" width="50px" class="rounded-sm ml-n2" />
+                        <div class="flex-fill pl-3 pr-3">
+                            <div><a href="{% url 'profile' pk=user.pk %}" class="text-dark font-weight-600">{{ user.username }}</a></div>
+                            <div class="text-muted fs-13px">{{ user.bio }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Dislikes</h3>
+            <div class="list-group">
+                {% for user in post.disliked_by.all %}
+                    <div class="list-group-item d-flex align-items-center">
+                        <img src="{{ user.profile_pic.url }}" alt="{{ user.username }}" width="50px" class="rounded-sm ml-n2" />
+                        <div class="flex-fill pl-3 pr-3">
+                            <div><a href="{% url 'profile' pk=user.pk %}" class="text-dark font-weight-600">{{ user.username }}</a></div>
+                            <div class="text-muted fs-13px">{{ user.bio }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+<!-- comment_list.html -->
+{% for comment in comments %}
+{% if comment.parent is null %}
+<div class="row comment" style="background-color: #f0f0f0;">
+    <div class="col">
+        <div class="d-flex flex-start">
+            <img class="rounded-circle shadow-1-strong me-3" src="{{ comment.author.profile_pic.url }}" alt="avatar" width="65" height="65" />
+            <div class="flex-grow-1 flex-shrink-1">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="mb-1">
+                            {{ comment.author.username }} <span class="small">- {{ comment.created|timesince }} ago</span>
+                        </p>
+                        <label for="reply-form-{{ comment.id }}" class="reply-button btn btn-link"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></label>
+                    </div>
+                    <p class="small mb-0">
+                        {{ comment.content }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="reply-form" style="display: none;">
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="parent" value="{{ comment.id }}">
+        <div class="card-footer border-0">
+            <div class="d-flex flex-start w-100">
+                <img class="rounded-circle shadow-1-strong me-3" src="{{ user.profile_pic.url }}" alt="avatar" width="40" height="40" />
+                <div class="form-outline w-100">
+                    <label class="form-label" for="{{ comment_form.content.id_for_label }}">Your Comment:</label>
+                    <textarea type="text" class="form-control" name="{{ comment_form.content.name }}" id="{{ comment_form.content.id_for_label }}" rows="4" required></textarea>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-2 pt-1">
+                <button type="submit" class="btn btn-primary btn-sm">Post reply</button>
+                <button type="button" class="btn btn-outline-primary btn-sm cancel-button">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endif %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const replyButtons = document.querySelectorAll(".reply-button");
+    const cancelButtons = document.querySelectorAll(".cancel-button");
+    const replyForms = document.querySelectorAll(".reply-form");
+
+    replyButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            replyForms[index].style.display = "block";
+        });
+    });
+
+    cancelButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            replyForms[index].style.display = "none";
+        });
+    });
+});
+</script>
+
+{% for child_comment in comment.replies.all %}
+    <div class="child-comments ms-5" style="background-color: #f0f0f0;">
+        <div class="row comment">
+            <div class="col">
+                <div class="d-flex flex-start">
+                    <img class="rounded-circle shadow-1-strong me-3" src="{{ child_comment.author.profile_pic.url }}" alt="avatar" width="65" height="65" />
+                    <div class="flex-grow-1 flex-shrink-1">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="mb-1">
+                                    {{ child_comment.author.username }} <span class="small">- {{ child_comment.created|timesince }} ago</span>
+                                </p>
+                            </div>
+                            <p class="small mb-0">
+                                {{ child_comment.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% endfor %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ page_user.username }} Following {% endblock %}
+
+{% block content %}
+    <h1>{{page_user.username}} following</h1>
+    <div class="list-group">
+        {% for user in following %}
+            <div class="list-group-item d-flex align-items-center">
+                <img src="{{ user.profile_pic.url }}" alt="{{ user.username }}" width="50px" class="rounded-sm ml-n2" />
+                <div class="flex-fill pl-3 pr-3">
+                    <div><a href="{% url 'profile' pk=user.pk %}" class="text-dark font-weight-600">{{ user.username }}</a></div>
+                    <div class="text-muted fs-13px">{{ user.bio }}</div>
+                </div>
+                {% if user != request.user %}
+                    {% if user in request.user.following.all %}
+                        <form action="{% url 'unsubscribe' pk=user.pk %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-danger">Unfollow</button>
+                        </form>
+                    {% else %}
+                        <form action="{% url 'subscribe' pk=user.pk %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-primary">Follow</button>
+                        </form>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

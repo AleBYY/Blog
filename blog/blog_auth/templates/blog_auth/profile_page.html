@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Profile{% endblock title %}
+
+{% block content %}
+
+<section class="h-100 gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+                <div class="card">
+                    <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:300px;">
+                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                            {% if page_user.profile_pic %}
+                            <img src="{{ page_user.profile_pic.url }}"
+                                 alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                 style="width: 200px; z-index: 1; ">
+                            {% else %}
+                            <img src="{% static 'blog_auth/profile_pics/avatar.webp' %}"
+                                 alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                 style="width: 200px; z-index: 1; ">
+                            {% endif %}
+                            {% if user.is_authenticated %}
+                            {% if user != page_user %}
+                            {% if is_following %}
+                            <form action="{% url 'unsubscribe' pk=page_user.pk %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger">
+                                    Unfollow
+                                </button>
+                            </form>
+                            {% else %}
+                            <form action="{% url 'subscribe' pk=page_user.pk %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-primary">
+                                    Follow
+                                </button>
+                            </form>
+                            {% endif %}
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                        <div class="ms-3" style="margin-top: 130px;">
+                            <h2>{{ page_user.username }}</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                        <div class="d-flex justify-content-end text-center py-1">
+                            <div>
+                                <p class="mb-1 h5">0</p>
+                                <p class="small text-muted mb-0">Photos</p>
+                            </div>
+                            <div class="px-3">
+                                <p class="mb-1 h5">{{ page_user.followers.count }}</p>
+                                <p class="small text-muted mb-0">
+                                    <a href="{% url 'followers_list' pk=page_user.pk %}">Followers</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="mb-1 h5">{{ page_user.following.count }}</p>
+                                <p class="small text-muted mb-0">
+                                    <a href="{% url 'following_list' pk=page_user.pk %}">Following</a>
+                                </p>
+                            </div>
+                            <div class="ml-3">
+                                <div class="ml-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 text-black">
+                            <div class="mb-5">
+                                <p class="mb-0"><a href="{% url 'profile_edit' user.pk %}" class="text-muted">Edit
+                                    profile</a></p>
+                                <p class="lead fw-normal mb-1">About</p>
+                                <div class="p-4" style="background-color: #f8f9fa;">
+                                    <p class="font-italic mb-1">{{ page_user.bio }}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <p class="lead fw-normal mb-0">Recent posts</p>
+                                <p class="mb-0"><a href="{% url 'post_add' %}" class="text-muted">New Post</a></p>
+                            </div>
+                            <div class="row g-2">
+                                {% for post in latest_posts %}
+                                <div class="col-md-6 mb-2">
+                                    <div class="card">
+                                        <img src="{{ post.images.url }}" alt="{{ post.name }}"
+                                             class="card-img-top img-fluid">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="{% url 'post_detail' post.pk %}">{{ post.name }}</a></h5>
+                                            <p class="card-text">{{ post.description }}</p>
+                                            <p class="card-text"><small class="text-muted">{{ post.post_date }}</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

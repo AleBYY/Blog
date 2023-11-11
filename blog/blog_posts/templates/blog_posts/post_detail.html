@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Post{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10">
+            <article>
+                <header class="mb-4">
+                    <h1 class="fw-bolder mb-1">{{ post.name }}</h1>
+                    <div class="d-flex flex-column align-items-start">
+                        <div class="d-flex align-items-center mb-2">
+                            {% if user.is_authenticated %}
+                            <form action="{% url 'like_post' post.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        class="btn btn-success mr-2{% if post.is_liked_by_user %} disabled{% endif %}">
+                                    Like
+                                </button>
+                            </form>
+                            <form action="{% url 'dislike_post' post.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        class="btn btn-danger mr-2{% if post.is_disliked_by_user %} disabled{% endif %}">
+                                    Dislike
+                                </button>
+                            </form>
+                            {% else %}
+                            <a href="{% url 'login' %}" class="btn btn-primary mr-2">
+                                Log in to React
+                            </a>
+                            {% endif %}
+                            <a href="{% url 'reacted_users' post.id %}" class="btn btn-primary">
+                                View Users Who Reacted
+                            </a>
+                        </div>
+                        <div class="mb-2">
+                            <p>Likes: <span id="likes-count">{{ post.liked_by.count }}</span></p>
+                            <p>Dislikes: <span id="dislikes-count">{{ post.disliked_by.count }}</span></p>
+                        </div>
+                    </div>
+                    <div class="text-muted fst-italic mb-2">{{ post.post_date }}, by {{ post.user.username }}</div>
+                </header>
+                <figure class="mb-4"><img class="img-fluid rounded"
+                                          src="{{ post.images.url }}" alt="..."/></figure>
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">{{ post.description }}</p>
+                </section>
+
+
+                <h2 class="text-center mb-4 pb-2">Comments section</h2>
+                {% include 'blog_comments/new_comment.html' %}
+                <div class="row">
+                    <div class="col">
+                        <div class="flex-grow-1 flex-shrink-1">
+                            {% include 'blog_comments/comment_base.html' %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock content %}

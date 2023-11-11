@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Post{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8 col-md-offset-2">
+
+            <h1>Create post</h1>
+            <form action="{% url 'post_add' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+                {% endfor %}
+
+            <input type="hidden" name="author" value="{{ request.user.id }}">
+                <button type="submit">Добавить</button>
+            </form>
+            {% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ user.username }} profile edit page{% endblock %}
+
+{% block content %}
+<div class="content-section">
+    <div class="media">
+        <img src="{{ user.profile_pic.url }}" class="rounded-3" style="width: 300px;"
+             alt="Avatar"/>
+        <div class="media-body">
+            <h2 class="account-heading">{{ user.username }}</h2></h2>
+            <p class="text-secondary">{{ user.email }}</p>
+        </div>
+    </div>
+    <form method="post" action="{% url 'profile_edit' pk=request.user.pk %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+                {% endfor %}
+
+
+                <button type="submit">Добавить</button>
+            </form>
+{% endblock %}
