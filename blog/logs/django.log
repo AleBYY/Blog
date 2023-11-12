@@ -1,191 +1,36 @@
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog/settings.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog/settings.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog/settings.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog/settings.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-Internal Server Error: /post/add/
-Traceback (most recent call last):
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/views.py", line 94, in form_valid
-    return super().form_valid(form)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
-    self.object = form.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/forms/models.py", line 542, in save
-    self.instance.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py", line 23, in send_email_notification
-    send_mail(subject, message, from_email, [to_email])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/__init__.py", line 87, in send_mail
-    return mail.send()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
-    return self.get_connection(fail_silently).send_messages([self])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 127, in send_messages
-    new_conn_created = self.open()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 94, in open
-    self.connection.login(self.username, self.password)
-  File "/usr/lib/python3.10/smtplib.py", line 750, in login
-    raise last_exception
-  File "/usr/lib/python3.10/smtplib.py", line 739, in login
-    (code, resp) = self.auth(
-  File "/usr/lib/python3.10/smtplib.py", line 662, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u17-20020a509511000000b005454b6d4e22sm114661eda.64 - gsmtp')
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog/settings.py changed, reloading.
-Watching for file changes with StatReloader
-Internal Server Error: /post/add/
-Traceback (most recent call last):
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/views.py", line 94, in form_valid
-    return super().form_valid(form)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
-    self.object = form.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/forms/models.py", line 542, in save
-    self.instance.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py", line 23, in send_email_notification
-    send_mail(subject, message, from_email, [to_email])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/__init__.py", line 87, in send_mail
-    return mail.send()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
-    return self.get_connection(fail_silently).send_messages([self])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 134, in send_messages
-    sent = self._send(message)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 152, in _send
-    self.connection.sendmail(
-  File "/usr/lib/python3.10/smtplib.py", line 901, in sendmail
-    raise SMTPRecipientsRefused(senderrs)
-smtplib.SMTPRecipientsRefused: {'"django.db.models.query_utils.DeferredAttribute object at 0x7f0098067220"': (553, b'5.1.3 The recipient address <django.db.models.query_utils.DeferredAttribute\n5.1.3 object at 0x7f0098067220> is not a valid RFC 5321 address. Please\n5.1.3 visit\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications for more information. t6-20020a170906064600b00997e00e78e6sm2884859ejb.112 - gsmtp')}
-Internal Server Error: /post/add/
-Traceback (most recent call last):
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/views.py", line 94, in form_valid
-    return super().form_valid(form)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
-    self.object = form.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/forms/models.py", line 542, in save
-    self.instance.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py", line 23, in send_email_notification
-    send_mail(subject, message, from_email, [to_email])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/__init__.py", line 87, in send_mail
-    return mail.send()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
-    return self.get_connection(fail_silently).send_messages([self])
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 134, in send_messages
-    sent = self._send(message)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 152, in _send
-    self.connection.sendmail(
-  File "/usr/lib/python3.10/smtplib.py", line 901, in sendmail
-    raise SMTPRecipientsRefused(senderrs)
-smtplib.SMTPRecipientsRefused: {'"django.db.models.query_utils.DeferredAttribute object at 0x7f0098067220"': (553, b'5.1.3 The recipient address <django.db.models.query_utils.DeferredAttribute\n5.1.3 object at 0x7f0098067220> is not a valid RFC 5321 address. Please\n5.1.3 visit\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications for more information. qx11-20020a170906fccb00b009b2f2451381sm2880573ejb.182 - gsmtp')}
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-Internal Server Error: /post/add/
-Traceback (most recent call last):
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/views.py", line 94, in form_valid
-    return super().form_valid(form)
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
-    self.object = form.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/forms/models.py", line 542, in save
-    self.instance.save()
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-  File "/home/aleksei/PycharmProjects/mysite/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-  File "/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py", line 22, in send_email_notification
-    to_email = instance.author.email  # Укажите адрес получателя уведомления
-AttributeError: 'Post' object has no attribute 'author'
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-/home/aleksei/Рабочий стол/DjangoBlog/blog/blog_posts/signals.py changed, reloading.
-Watching for file changes with StatReloader
-Watching for file changes with StatReloader
+Request processed in 0.0123 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0175 seconds
+Request processed in 0.0002 seconds
+Request processed in 0.0072 seconds
+Request processed in 1.0510 seconds
+Request processed in 0.0100 seconds
+Request processed in 0.0009 seconds
+Request processed in 0.0087 seconds
+Request processed in 0.0029 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0012 seconds
+Request processed in 0.0036 seconds
+Request processed in 0.0019 seconds
+Request processed in 0.0088 seconds
+Request processed in 0.0028 seconds
+Request processed in 0.2852 seconds
+Request processed in 0.0053 seconds
+Request processed in 0.0013 seconds
+Request processed in 0.0007 seconds
+Request processed in 0.0099 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0085 seconds
+Request processed in 0.0058 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0041 seconds
+Request processed in 0.0122 seconds
+Request processed in 0.3457 seconds
+Request processed in 0.0111 seconds
+Request processed in 0.0392 seconds
+Request processed in 0.0041 seconds
+Request processed in 0.0219 seconds
+Request processed in 0.0047 seconds
+Request processed in 0.0170 seconds
+Request processed in 0.0134 seconds
+Request processed in 0.0038 seconds

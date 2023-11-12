@@ -53,10 +53,10 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="{% url 'logout' %}">Sign out</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout_page' %}">Sign out</a></li>
             </ul>
             {% else %}
-            <form action="{% url 'login' %}">
+            <form action="{% url 'login_page' %}">
                 <button type="submit" class="btn btn-outline-light me-2">Login</button>
             </form>
             <form action="{% url 'registration' %}">

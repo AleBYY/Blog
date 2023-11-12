@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('blog_auth.urls')),
     path('', include('blog_posts.urls')),
     path('', include('blog_posts.api.v1.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:

@@ -3,6 +3,9 @@ from django.core.mail import send_mail
 from django.db.models.signals import pre_delete, post_save
 from django.dispatch import receiver
 import logging
+import requests
+
+from blog_comments.models import Comment
 from blog_posts.models import Post, Author
 
 logger = logging.getLogger(__name__)
@@ -21,3 +24,15 @@ def send_email_notification(sender, instance, created, **kwargs):
         from_email = settings.EMAIL_HOST_USER
         to_email = instance.user.email
         send_mail(subject, message, from_email, [to_email])
+
+
+@receiver(post_save, sender=Post)
+def create_comment_on_post_creation(sender, instance, created, **kwargs):
+    if created:
+        Comment.objects.create(
+            post=instance,
+            content="Please follow the rules of conduct in comments.",
+            author=Author.objects.get(username='system'),
+        )
+
+
