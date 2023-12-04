@@ -18,3 +18,679 @@ Request processed in 0.0026 seconds
 Request processed in 0.0008 seconds
 Request processed in 0.0045 seconds
 Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Request processed in 0.0212 seconds
+Request processed in 0.0194 seconds
+Not Found: /media/blog_posts/post_images/1.png.webp
+Request processed in 0.0203 seconds
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_NhzOTNZ.webp
+Request processed in 0.0170 seconds
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_JmahQcf.webp
+Request processed in 0.0181 seconds
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_i2YRmXR.webp
+Request processed in 0.0040 seconds
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Request processed in 0.0132 seconds
+Request processed in 0.0009 seconds
+Request processed in 0.6110 seconds
+Request processed in 0.0079 seconds
+Request processed in 0.0153 seconds
+Request processed in 0.0219 seconds
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_JmahQcf.webp
+Not Found: /media/blog_posts/post_tbs/profile_pic.png
+Request processed in 0.0229 seconds
+Not Found: /media/blog_posts/post_images/1.png.webp
+Request processed in 0.0188 seconds
+Request processed in 0.0230 seconds
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_i2YRmXR.webp
+Not Found: /media/blog_posts/post_images/2wYMyrXeIWPAODogQmrKV6NAOo.jpg_JNQIT0w_NhzOTNZ.webp
+Request processed in 0.0324 seconds
+Request processed in 0.0073 seconds
+Not Found: /media/blog_posts/post_tbs/profile_pic.png
+Request processed in 0.0233 seconds
+Request processed in 0.0073 seconds
+Not Found: /media/blog_posts/post_tbs/profile_pic.png
+No hostname was supplied. Reverting to default 'localhost'
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 94, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/forms/models.py", line 542, in save
+    self.instance.save()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py", line 31, in post_save_send_email_notification
+    send_email_notification.delay(instance.id)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/base.py", line 799, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+Request processed in 6.1528 seconds
+Watching for file changes with StatReloader
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 93, in form_valid
+    form.instance.user = self.request.user
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fd282f3bc10>>": "Post.user" must be a "Author" instance.
+Request processed in 0.0416 seconds
+Request processed in 0.0436 seconds
+Request processed in 0.0057 seconds
+Request processed in 0.0016 seconds
+Request processed in 0.5832 seconds
+Request processed in 0.0009 seconds
+Watching for file changes with StatReloader
+Request processed in 0.6102 seconds
+Request processed in 0.0009 seconds
+Request processed in 0.3245 seconds
+Request processed in 0.0075 seconds
+Request processed in 0.0154 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0305 seconds
+Request processed in 0.0041 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0273 seconds
+Request processed in 0.0092 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+No hostname was supplied. Reverting to default 'localhost'
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 94, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/forms/models.py", line 542, in save
+    self.instance.save()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py", line 31, in post_save_send_email_notification
+    send_email_notification.delay(instance.id)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/base.py", line 799, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+Request processed in 6.1101 seconds
+Watching for file changes with StatReloader
+No hostname was supplied. Reverting to default 'localhost'
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 94, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/forms/models.py", line 542, in save
+    self.instance.save()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py", line 31, in post_save_send_email_notification
+    send_email_notification.delay(instance.id)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/base.py", line 799, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+Request processed in 6.0788 seconds
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/amqp/transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 94, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/forms/models.py", line 542, in save
+    self.instance.save()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py", line 31, in post_save_send_email_notification
+    send_email_notification.delay(instance.id)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/base.py", line 799, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/celery/app/amqp.py", line 518, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 186, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 195, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 218, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/messaging.py", line 234, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 953, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+Request processed in 6.1028 seconds
+/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /post/add/
+Traceback (most recent call last):
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/views.py", line 94, in form_valid
+    return super().form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/forms/models.py", line 542, in save
+    self.instance.save()
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py", line 40, in create_comment_on_post_creation
+    author=Author.objects.get(username='system'),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aleksei/PycharmProjects/Blog/venv/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+blog_posts.models.Author.DoesNotExist: Author matching query does not exist.
+Request processed in 0.0613 seconds
+/home/aleksei/PycharmProjects/Blog/blog/blog_posts/signals.py changed, reloading.
+Watching for file changes with StatReloader
+Request processed in 0.0643 seconds
+Request processed in 0.0072 seconds
+Request processed in 0.0064 seconds
+Request processed in 0.0088 seconds
+Request processed in 0.0015 seconds
+Request processed in 0.0031 seconds
+Request processed in 0.0258 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0143 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0062 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0036 seconds
+Request processed in 0.0005 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0077 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0311 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0061 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0147 seconds
+Request processed in 0.0113 seconds
+Request processed in 0.0002 seconds
+Request processed in 0.0044 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0096 seconds
+Request processed in 0.0087 seconds
+Request processed in 0.0005 seconds
+Request processed in 0.0063 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0208 seconds
+Request processed in 0.0116 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0122 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0298 seconds
+Request processed in 0.0015 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0008 seconds
+Request processed in 0.0015 seconds
+Request processed in 0.0085 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0262 seconds
+Request processed in 0.0039 seconds
+Not Found: /media/blog_posts/default/avatar.webp
+Request processed in 0.0139 seconds
+Request processed in 0.0085 seconds
+Request processed in 0.0010 seconds
+Request processed in 0.0004 seconds
+Request processed in 0.0008 seconds
+Request processed in 0.0144 seconds
+Request processed in 0.0005 seconds
+Request processed in 0.0035 seconds
+Request processed in 0.0021 seconds
+Request processed in 0.0038 seconds
+Request processed in 0.0020 seconds
+Request processed in 0.0198 seconds
+Request processed in 0.0004 seconds
+Request processed in 0.0304 seconds
+Request processed in 0.0008 seconds
+Request processed in 0.0003 seconds
+Request processed in 0.0139 seconds
+Request processed in 0.0004 seconds
+Request processed in 0.0015 seconds
+Request processed in 0.0098 seconds
+Request processed in 0.0002 seconds
+Request processed in 0.0006 seconds
+Request processed in 0.0054 seconds
+Request processed in 0.0163 seconds
+Request processed in 0.0002 seconds
+Request processed in 0.0013 seconds
+Request processed in 0.0025 seconds
+Request processed in 0.0012 seconds
+Request processed in 0.0269 seconds
+Request processed in 0.0005 seconds
+Request processed in 0.0002 seconds
+Request processed in 0.0142 seconds
+Request processed in 0.0005 seconds
