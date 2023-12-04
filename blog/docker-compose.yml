@@ -2,18 +2,18 @@ version: '3'
 
 services:
   web:
-    image: django_blog  # Имя вашего Docker образа
+    image: django_blog
     container_name: django_blog_container
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./blog:/manage.py  # Путь к вашему приложению внутри контейнера
+      - ./blog:/manage.py
     ports:
       - "8000:8000"
     depends_on:
       - db
 
   db:
-    image: postgres:latest  # Образ базы данных (в примере используется PostgreSQL)
+    image: postgres:latest
     container_name: postgres_container
     environment:
       POSTGRES_DB: mydatabase
