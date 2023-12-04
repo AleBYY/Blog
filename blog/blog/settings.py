@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lg7y^q^0mk3)yf&^a!iawd4_u4xrb&5^ba0sek$lj@3^5cdi$8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -223,5 +223,10 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
+
+
+CELERY_BROKER_URL = 'pyamqp://guest:guest@localhost//'
+CELERY_RESULT_BACKEND = 'rpc://'
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
 
